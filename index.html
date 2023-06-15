@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="import">
+    <button onclick="myfunction()">Chơi</button>
+    <script>
+        let num = parseInt(prompt("nhập số lớn nhất"))
+        let random = Math.floor(Math.random() * num)
+        function myfunction() {
+            let a = +document.getElementById("import").value
+            let b = random
+            console.log(random)
+            console.log(num)
+            console.log(a)
+            while (a != random) {
+                alert("bạn đoán sai rồi")
+                break
+            }
+            if (a == random) {
+                alert("bạn đoán đúng rồi")
+            } 
+        }
+    </script>
+</body>
