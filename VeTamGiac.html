@@ -8,11 +8,15 @@
 </head>
 
 <body>
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
     <script>
         function drawTriangle() {
             let str = "";
-            for (let i = 5; i > 0; i--) {
-                for (let j = 0; j <= 5; j++) {
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
                     if (j < i) {
                         str += "&nbsp;&nbsp;"
                     } else {
@@ -20,12 +24,37 @@
                     }
                 }
                 str += "<br>";
-            }
-            document.write(str);
 
+            }
+            document.getElementById("1").innerHTML = str
+        }
+        let str2 = "";
+        for (let i = 5; i > 0; i--) {
+            for (let j = 0; j <= 5; j++) {
+                if (j < i) {
+                    str2 += "&nbsp;&nbsp;"
+                } else {
+                    str2 += "*";
+                }
+            }
+            str2 += "<br>";
 
         }
-        drawTriangle()
+        document.getElementById("2").innerHTML = str2
+
+        // let str3 = "";
+        // for (let i = 0; i < 5; i++) {
+        //     for (let j = 0; j < i; j++) {
+        //         if (j < i) {
+        //             str3 += "&nbsp"
+        //         } else {
+        //             str3 += "*";
+        //         }
+        //     }
+        // }
+        // str += "<br>";
+        // document.getElementById("3").innerHTML = str3
+        // drawTriangle()
     </script>
 </body>
 
